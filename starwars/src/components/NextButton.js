@@ -1,12 +1,11 @@
 import React from "react";
+import { Button } from 'reactstrap';
 
 export default function NextButton (props) {
 
     return (
-        <div>
-            <button className="next-button" onClick={() => {props.handleNextButton()}}>
-            Next Button
-            </button>
-        </div>
+        <Button style ={{marginTop: '10px' }} color="primary" size="lg" block onClick={() => {props.handleNextButton()}}>
+            Next
+        </Button>
     )
 }

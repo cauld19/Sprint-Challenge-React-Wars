@@ -3,6 +3,7 @@ import CharacterCard from "./CharacterCard.js";
 import axios from "axios";
 import NextButton from "./NextButton";
 import PreviousButton from "./PreviousButton.js";
+import { Container, Row } from "reactstrap";
 
 export default function CharacterList() {
 
@@ -40,26 +41,27 @@ export default function CharacterList() {
 
 
     return (
-        <div>
-            {data.map(data => {
-                return (
-                    <CharacterCard 
-                        name={data.name}
-                        films={data.films.length}
-                        birthYear={data.birth_year}
-                        height={data.height}
-                        mass={data.mass}
-                        key={data.name}
-                    />
-                );
-            })}
+        <Container>
+            <Row>
+                {data.map(data => {
+                    return (
+                        <CharacterCard 
+                            name={data.name}
+                            films={data.films.length}
+                            birthYear={data.birth_year}
+                            height={data.height}
+                            mass={data.mass}
+                            key={data.name}
+                        />
+                    );
+                })}
+            </Row>
             <NextButton 
                 handleNextButton={handleNextButton}
             />
             <PreviousButton 
                 handlePreviousButton={handlePreviousButton}
             />
-        </div>
-            
+        </Container>
     )
 }
