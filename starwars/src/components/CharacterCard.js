@@ -8,7 +8,7 @@ export default function CharacterCard(props) {
             <p>Birth year: {props.birthYear}</p>
             <p>Height: {props.height}cm</p>
             <p>Mass: {props.mass}kg</p>
-            <p>Films: {props.films}</p>
+            <p>Films: {props.films}</p>    
         </div>
     )
 }
