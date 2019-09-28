@@ -4,7 +4,7 @@ import { Button } from 'reactstrap';
 export default function PreviousButton (props) {
 
     return (
-        <Button color="secondary" size="lg" block onClick={() => {props.handlePreviousButton()}}>
+        <Button style ={{opacity: '0.9' }}color="secondary" size="lg" block onClick={() => {props.handlePreviousButton()}}>
             Previous
         </Button>
     )
